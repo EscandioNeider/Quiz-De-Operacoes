@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Equações</title>
+</head>
+<body style="background-image: url(../media/neural-green-connections.gif);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+display: flex;
+justify-content: center;
+align-items: center;">
+    <div class="cont-des">
+        <h1>Quiz de Matemática</h1>
+        <p id="question">Pronto para começar?</p>
+        <input type="text" id="answer" placeholder="Sua resposta">
+        <button id="submit">Responder</button>
+        <p id="feedback"></p>
+        <p id="score">Pontuação: 0</p>
+    </div>
+
+    <script>
+        const questionEl = document.getElementById('question');
+        const answerInput = document.getElementById('answer');
+        const feedbackEl = document.getElementById('feedback');
+        const submitBtn = document.getElementById('submit');
+        const scoreEl = document.getElementById('score');
+
+        let currentAnswer = 0;
+        let score = 0;
+
+        function generateQuestion() {
+            const num1 = Math.floor(Math.random() * 10) + 1; // Número entre 1 e 10
+            const num2 = Math.floor(Math.random() * 10) + 1; // Número entre 1 e 10
+            const operations = ["+", "-", "*", "/"];
+            const operation = operations[Math.floor(Math.random() * operations.length)];
+
+            let questionText;
+            switch (operation) {
+                case "+":
+                    currentAnswer = num1 + num2;
+                    questionText = `Quanto é ${num1} + ${num2}?`;
+                    break;
+                case "-":
+                    currentAnswer = num1 - num2;
+                    questionText = `Quanto é ${num1} - ${num2}?`;
+                    break;
+                case "*":
+                    currentAnswer = num1 * num2;
+                    questionText = `Quanto é ${num1} x ${num2}?`;
+                    break;
+                case "/":
+                    currentAnswer = (num1 / num2).toFixed(2); // Limita a 2 casas decimais
+                    questionText = `Quanto é ${num1} ÷ ${num2}?`;
+                    break;
+            }
+
+            questionEl.textContent = questionText; 
+        }
+
+        submitBtn.addEventListener('click', () => {
+            const userAnswer = answerInput.value.trim();
+            if (parseFloat(userAnswer) === parseFloat(currentAnswer)) {
+                feedbackEl.textContent = "Correto! 🎉";
+                score++;
+                scoreEl.textContent = `Pontuação: ${score}`;
+                answerInput.value = "";
+                generateQuestion();
+            } else {
+                feedbackEl.textContent = "Tente novamente! ❌";
+            }
+        });
+
+        generateQuestion(); // Inicia com uma pergunta
+    </script>
+</body>
+</html>
