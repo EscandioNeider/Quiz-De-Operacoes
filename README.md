@@ -16,7 +16,7 @@ Neste site, temos um quiz matemático
 2. Resolva as equações apresentadas.
    
 ## ✨ **Melhorias**    
-- Estilização da página "multiplicacao.html";
+- Mudança na estilização;
 
 
 

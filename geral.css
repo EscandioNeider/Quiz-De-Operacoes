@@ -4,35 +4,36 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color:#361d06;
 }
 
 /* ---PÁGINA - INDEX--- */
 .cont-index {
-    background-color: #bf9791c4;
+    background-color:#76513c;
     backdrop-filter: blur(4px);
     text-align: center;
     width: 80%;
     max-width: 500px;
     border-radius: 15px;
     padding: 30px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.423);
+    box-shadow: 0 8px 15px #9e6431b4;
 }
 
 h1 {
     font-size: 2rem;
-    color: #192940;
+    color:#eee6dd;
 }
 
 p {
     font-size: 1.2rem;
     line-height: 1.5;
-    color: #192940;
+    color: #eee6dd;
 }
 
 p button {
   font-size: 1.2rem;
   line-height: 1.5;
-  color: #774e62;
+  color:#eee6dd;
 }
 /* Botão "Vamos Lá!" */
 .vamos-la-botao{
@@ -45,9 +46,9 @@ p button {
   .vamos-la-botao button {
     width: 150px;
     height: 50px;
-    background-color:#d0b0c0;
+    background-color:#976548;
     margin: 20px;
-    color: #774e62;
+    color: #eee6dd;
     position: relative;
     overflow: hidden;
     font-size: 14px;
@@ -68,7 +69,7 @@ p button {
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: #774e62;
+    background-color: #c97e3c;
     transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
   }
   
@@ -99,7 +100,7 @@ p button {
     position: absolute;
     width: 2px;
     height: 0;
-    background-color: #774e62;
+    background-color:#c97e3c;
     transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
   }
   
@@ -140,7 +141,7 @@ p button {
   .vamos-la-botao button p:after {
     content: attr(data-text);
     top: 150%;
-    color: #774e62;
+    color: #eee6dd;
   }
   
   .vamos-la-botao button:hover:before, .vamos-la-botao button:hover:after {
@@ -235,14 +236,14 @@ a {
 
 /* Estilização individual */
 #s1, #s2, #m1, #d1, #d2 {
-  background-color: #6973a0;
+  background-color: #76513c;
   border-radius: 25px;
 }
 
 /* Hover */
 .cont-categorias div:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px #1e243d;
+  box-shadow: 0 8px 16px #c97e3c3b;;
 }
 
 /* Active */
@@ -251,14 +252,14 @@ a {
 #m1:active,
 #d1:active,
 #d2:active{
-  box-shadow: 0px 4px 0px #1e243d;
+  box-shadow: 0px 4px 0px #c97e3c33;
   position: relative;
   top: 2px;
 }
 
 /* ---PÁGINA - SOMA--- */
-.cont-soma {
-  background-color: rgba(111, 149, 180, 0.407);
+.container-operacoes {
+  background-color:#76513c;
   backdrop-filter: blur(4px);
   text-align: center;
   width: 80%;
@@ -268,44 +269,45 @@ a {
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.423);
 }
 
-.cont-soma h1,
-.cont-soma p{
-  color: #c9ccda;
+.container-operacoes h1,
+.container-operacoes p{
+  color:  #eee6dd;
 }
 
 /* Campo de resposta */
-.cont-soma input{
-  background-color: rgba(165, 196, 221, 0.659);
+.container-operacoes input{
+  background-color:#975922d3;
   text-align: center;
   border-radius: 5px;
   border-style: none;
   height: 25px;
 }
 
-.cont-soma input:focus{
-  background-color: rgba(120, 150, 174, 0.775);
+.container-operacoes input:focus{
+  background-color: #7a471bd3;
   text-align: center;
   border-radius: 5px;
   border-style: none;
   height: 25px;
 }
-.cont-soma input::placeholder{
-  color: #192940;
+
+.container-operacoes input::placeholder{
+  color: #eee6dd; 
 }
 
 /* Botao de enviar resultado */
-.submit-soma {
+.submit{
   height: 35px;
-  color: #b9c0e0;
+  color: #eee6dd;
   text-align: center;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 5px;
   --clr-font-main: hsla(0 0% 20% / 100);
-  --btn-bg-1: #33417f;
-  --btn-bg-2: #212c5f;
-  --btn-bg-color: #b9c0e0;
+  --btn-bg-1: #b36335;
+  --btn-bg-2: #976548;
+  --btn-bg-color: #7a471bd3;
   --radii: 0.5em;
   cursor: pointer;
   padding: 0.9em 1.4em;
@@ -320,19 +322,19 @@ a {
   );
   border: none;
   box-shadow:
-    0px 0px 20px rgba(19, 175, 223, 0.5),
-    0px 5px 5px -1px rgba(73, 58, 233, 0.25),
-    inset 4px 4px 8px rgba(175, 230, 255, 0.5),
-    inset -4px -4px 8px rgba(172, 196, 235, 0.595);
+    0px 0px 20px #c27e42d3,
+    0px 5px 5px -1px #c27e42d3,
+    inset 4px 4px 8px #c27e42d3,
+    inset -4px -4px 8px #c27e42d3;
 }
 
-.submit-soma:hover{
+.submit:hover{
   border-radius: 5px;
-  color: #192940;
+  color: #eee6dd;
   --clr-font-main: hsla(0 0% 20% / 100);
-  --btn-bg-1: #a2aee2;
-  --btn-bg-2: #717ba6;
-  --btn-bg-color: #5e6688;
+  --btn-bg-1: #976548;
+  --btn-bg-2: #b36335;
+  --btn-bg-color: #7a471bd3;
   --radii: 0.5em;
   cursor: pointer;
   padding: 0.9em 1.4em;
@@ -347,205 +349,8 @@ a {
   );
   border: none;
   box-shadow:
-    0px 0px 20px rgba(44, 44, 130, 0.685),
-    0px 5px 5px -1px rgba(52, 45, 130, 0.678),
-    inset 4px 4px 8px rgba(17, 19, 136, 0.625),
-    inset -4px -4px 8px rgba(39, 36, 122, 0.71);
+    0px 0px 20px #f3994ae1,
+    0px 5px 5px -1px #f3994ae1,
+    inset 4px 4px 8px #f3994ae1,
+    inset -4px -4px 8px #f3994ae1;
 }
-
-/* ---PÁGINA - SUBTRAÇÃO--- */
-.cont-sub{
-  background-color: #5c7c8ca4;
-  backdrop-filter: blur(4px);
-  text-align: center;
-  width: 80%;
-  max-width: 500px;
-  border-radius: 15px;
-  padding: 30px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.423);
-}
-
-.cont-sub h1,
-.cont-sub p{
-  color: #92d5e4;
-}
-
-/* Campo de resposta */
-.cont-sub input{
-  background-color: rgba(152, 197, 234, 0.859);
-  text-align: center;
-  border-radius: 5px;
-  border-style: none;
-  height: 25px;
-}
-
-.cont-sub input:focus{
-  background-color: rgba(120, 161, 194, 0.859);
-  text-align: center;
-  border-radius: 5px;
-  border-style: none;
-  height: 25px;
-}
-.cont-sub input::placeholder{
-  color: #192940;
-}
-
-/* Botao de enviar resultado */
-.submit-sub {
-  height: 35px;
-  color: #d5d9eb;
-  text-align: center;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  --clr-font-main: hsla(0 0% 20% / 100);
-  --btn-bg-1: #0c113d;
-  --btn-bg-2: #0b1f29;
-  --btn-bg-color: #4a5c82;
-  --radii: 0.5em;
-  cursor: pointer;
-  padding: 0.9em 1.4em;
-  font-weight: 500;
-  transition: 0.8s;
-  background-size: 280% auto;
-  background-image: linear-gradient(
-    325deg,
-    var(--btn-bg-2) 0%,
-    var(--btn-bg-1) 55%,
-    var(--btn-bg-2) 90%
-  );
-  border: none;
-  box-shadow:
-    0px 0px 20px rgba(6, 43, 55, 0.365),
-    0px 5px 5px -1px #071c35,
-    inset 4px 4px 8px #032d42,
-    inset -4px -4px 8px #5c7c8c;
-}
-
-.submit-sub:hover{
-  border-radius: 5px;
-  color: #e5e8ec;
-  --clr-font-main: hsla(0 0% 20% / 100);
-  --btn-bg-1: #393c5f;
-  --btn-bg-2: #1e3a48;
-  --btn-bg-color: #4a5c82;
-  --radii: 0.5em;
-  cursor: pointer;
-  padding: 0.9em 1.4em;
-  font-weight: 500;
-  transition: 0.4s;
-  background-size: 280% auto;
-  background-image: linear-gradient(
-    325deg,
-    var(--btn-bg-2) 0%,
-    var(--btn-bg-1) 55%,
-    var(--btn-bg-2) 90%
-  );
-  border: none;
-  box-shadow:
-    0px 0px 20px #52cfebc4,
-    0px 5px 5px -1px rgba(88, 142, 173, 0.678),
-    inset 4px 4px 8px rgba(7, 92, 128, 0.625),
-    inset -4px -4px 8px rgba(139, 167, 220, 0.566);
-}
-/* ---PÁGINA - MULTIPLICAÇÃO--- */
-.cont-multi{
-  background-color: #614046a4;
-  backdrop-filter: blur(4px);
-  text-align: center;
-  width: 80%;
-  max-width: 500px;
-  border-radius: 15px;
-  padding: 30px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.423);
-}
-
-.cont-multi h1,
-.cont-multi p{
-  color: #8c81bc;
-}
-
-/* Campo de resposta */
-.cont-multi input{
-  background-color: #63598c;
-  color: #dce0f0;
-  text-align: center;
-  border-radius: 5px;
-  border-style: none;
-  height: 25px;
-}
-
-.cont-multi input:focus{
-  background-color: #504871;
-  text-align: center;
-  border-radius: 5px;
-  border-style: none;
-  height: 25px;
-}
-.cont-multi input::placeholder{
-  color: #dce0f0;
-}
-
-/* Botao de enviar resultado */
-.submit-mult{
-  height: 35px;
-  color: #d5d9eb;
-  text-align: center;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  --clr-font-main: hsla(0 0% 20% / 100);
-  --btn-bg-1: #3d0c0c;
-  --btn-bg-2: #3d0c0c;
-  --btn-bg-color: #612727;
-  --radii: 0.5em;
-  cursor: pointer;
-  padding: 0.9em 1.4em;
-  font-weight: 500;
-  transition: 0.8s;
-  background-size: 280% auto;
-  background-image: linear-gradient(
-    325deg,
-    var(--btn-bg-2) 0%,
-    var(--btn-bg-1) 55%,
-    var(--btn-bg-2) 90%
-  );
-  border: none;
-  box-shadow:
-    0px 0px 20px #8c81bc,
-    0px 5px 5px -1px #614046a4,
-    inset 4px 4px 8px #8c81bc7a,
-    inset -4px -4px 8px #8c5c5c;
-}
-
-.submit-mult:hover{
-  border-radius: 5px;
-  color: #e5e8ec;
-  --clr-font-main: hsla(0 0% 20% / 100);
-  --btn-bg-1: #612727;
-  --btn-bg-2:#3d0c0c;
-  --btn-bg-color: #3d0c0c;
-  --radii: 0.5em;
-  cursor: pointer;
-  padding: 0.9em 1.4em;
-  font-weight: 500;
-  transition: 0.4s;
-  background-size: 280% auto;
-  background-image: linear-gradient(
-    325deg,
-    var(--btn-bg-2) 0%,
-    var(--btn-bg-1) 55%,
-    var(--btn-bg-2) 90%
-  );
-  border: none;
-  box-shadow:
-    0px 0px 20px #8c5c5c,
-    0px 5px 5px -1px #8c81bc7a,
-    inset 4px 4px 8px #8c81bc,
-    inset -4px -4px 8px #8c81bc;
-}
-/* ---PÁGINA - DIVISÃO--- */
-
-/* ---PÁGINA - DESAFIO--- */
