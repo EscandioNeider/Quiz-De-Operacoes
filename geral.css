@@ -101,7 +101,7 @@ p button {
     width: 2px;
     height: 0;
     background-color:#c97e3c;
-    transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+    transition: all 0.1s cubic-bezier(0.35, 0.1, 0.25, 1);
   }
   
   .vamos-la-botao button span:before {
@@ -118,7 +118,7 @@ p button {
   .vamos-la-botao button p {
     padding: 0;
     margin: 0;
-    transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+    transition: all 0.2s cubic-bezier(0.35, 0.1, 0.25, 1);
     position: absolute;
     width: 100%;
     height: 100%;
